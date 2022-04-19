@@ -95,8 +95,9 @@ Motoristas de Van: Motoristas de van universitária que estejam com dificuldades
 
 Foram definidas quatro personas, com base em nossas pesquisas de campos e por meio de notícias, são elas:
 
-![Sprint 1 - Processo de Design Thinking - Frame 5](https://user-images.githubusercontent.com/99363911/164113257-8acd7844-4e2e-4dc0-a49b-53212697e4a3.jpg)
-![Sprint 1 - Processo de Design Thinking - Frame 4](https://user-images.githubusercontent.com/99363911/164113274-59fc488b-951a-4d1c-858d-452349fcc8a1.jpg)
+![Sprint 1 - Processo de Design Thinking - Frame 5](https://user-images.githubusercontent.com/99363911/164113508-4af218f1-90ef-4620-965e-9b26cf7da9d2.jpg)
+![Sprint 1 - Processo de Design Thinking - Frame 4](https://user-images.githubusercontent.com/99363911/164113513-9233252d-dba1-4d68-b0f9-2c06c47c9769.jpg)
+
 
 ## Histórias de Usuários
 
