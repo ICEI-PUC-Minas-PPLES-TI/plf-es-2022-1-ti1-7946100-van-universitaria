@@ -85,11 +85,9 @@ Motoristas de Van: Motoristas de van universitária que estejam com dificuldades
  
 # Especificações do Projeto
 
-
 # Técnicas e ferramentas utilizadas
 
 Optamos por conversar com pessoas pessoalmente para entender melhor como esse problema as afeta. Os entrevistados foram estudantes, motoristas de vans e pais preocupados com a segurança de seus filhos. Também realizamos pesquisas por meio de redes sociais, para entender como o produto era divulgado e como as pessoas tentavam procurar o mesmo.
-
 
 ## Personas e Mapas de Empatia
 
@@ -97,7 +95,6 @@ Foram definidas quatro personas, com base em nossas pesquisas de campos e por me
 
 ![Sprint 1 - Processo de Design Thinking - Frame 5](https://user-images.githubusercontent.com/99363911/164113508-4af218f1-90ef-4620-965e-9b26cf7da9d2.jpg)
 ![Sprint 1 - Processo de Design Thinking - Frame 4](https://user-images.githubusercontent.com/99363911/164113513-9233252d-dba1-4d68-b0f9-2c06c47c9769.jpg)
-
 
 # Histórias de Usuários
 
@@ -114,14 +111,9 @@ Como MOTORISTA preciso de uma plataforma que me aproxime de futuros clientes, pa
 
 Como MOTORISTA quero uma plataforma que me auxilie na rota das entregas, para eu poder prospectar clientes que morem mais perto de onde eu passo.
 
-
 # Requisitos
-#
-#
+
 #### Requisitos Funcionais
-#
-#
-#
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
@@ -136,14 +128,8 @@ RF-008 | Avaliação de motoristas para estudantes.| Baixo
 RF-009 | Avaliação de estudantes para motoristas.| Baixo
 RF-0010 | Mostrar horário que motorista passa na faculdade (com margem de atraso)s.| Medio
 
-#
-#
-#
-
-
 ### Requisitos não Funcionais
-#
-#
+
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 RNF-001 | Login deve ter autenticação de dois fatores.| Baixa
@@ -156,10 +142,8 @@ RNF-007 | Motoristas com melhores avaliações ficam nas melhores posições.| B
 RNF-008 | Motoristas com notas menores ficam nas piores posições| Baixa
 RNF-009 | Estudantes com avaliações ruins veem mais motoristas com avaliações ruins | Baixa
 RNF-0010 | Motoristas ou estudantes com muitas denúncias são bloqueados da plataforma | Baixa
-#
-#
+
 ## Restrições
-#
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
@@ -168,9 +152,6 @@ RNF-0010 | Motoristas ou estudantes com muitas denúncias são bloqueados da pla
 |03| Não se deve armazenar dados sensíveis. |
 |04| As vans devem estar com todos os documentos em dia  |
 |05| As vans devem ter lugares disponíveis  |
-#
-#
-
 
 # Projeto de Interface
 
