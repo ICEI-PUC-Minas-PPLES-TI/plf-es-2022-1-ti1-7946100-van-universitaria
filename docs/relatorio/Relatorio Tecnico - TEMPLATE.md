@@ -85,11 +85,11 @@ Motoristas de Van: Motoristas de van universitária que estejam com dificuldades
  
 # Especificações do Projeto
 
-......  COLOQUE AQUI O SEU TEXTO ......
 
-> Apresente uma visão geral do que será abordado nesta parte do
-> documento, enumerando as técnicas e/ou ferramentas utilizadas para
-> realizar a especificações do projeto
+# Técnicas e ferramentas utilizadas
+
+Optamos por conversar com pessoas pessoalmente para entender melhor como esse problema as afeta. Os entrevistados foram estudantes, motoristas de vans e pais preocupados com a segurança de seus filhos. Também realizamos pesquisas por meio de redes sociais, para entender como o produto era divulgado e como as pessoas tentavam procurar o mesmo.
+
 
 ## Personas e Mapas de Empatia
 
@@ -99,83 +99,77 @@ Foram definidas quatro personas, com base em nossas pesquisas de campos e por me
 ![Sprint 1 - Processo de Design Thinking - Frame 4](https://user-images.githubusercontent.com/99363911/164113513-9233252d-dba1-4d68-b0f9-2c06c47c9769.jpg)
 
 
-## Histórias de Usuários
+# Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Como ESTUDANTE preciso de uma plataforma que auxilie no contato com motoristas que tenham rotas próximas a minha casa para poder escolher o melhor preço.
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+Como ESTUDANTE preciso de uma plataforma que possa mediar o contato entre eu e o motorista de van para chegar em casa com mais segurança.
 
-> Apresente aqui as histórias de usuário que são relevantes para o
-> projeto de sua solução. As Histórias de Usuário consistem em uma
-> ferramenta poderosa para a compreensão e elicitação dos requisitos
-> funcionais e não funcionais da sua aplicação. Se possível, agrupe as
-> histórias de usuário por contexto, para facilitar consultas
-> recorrentes à essa parte do documento.
->
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+Como ESTUDANTE quero uma plataforma que me dê segurança na qualidade das vans para meu maior conforto.
 
-## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+Como MOTORISTA quero uma plataforma que me dê segurança ao colocar pessoas novas dentro da minha van, para assim não colocar ninguém em risco.
 
-### Requisitos Funcionais
+Como MOTORISTA preciso de uma plataforma que me aproxime de futuros clientes, para poder oferecer o melhor preço para todos 
+
+Como MOTORISTA quero uma plataforma que me auxilie na rota das entregas, para eu poder prospectar clientes que morem mais perto de onde eu passo.
+
+
+# Requisitos
+#
+#
+#### Requisitos Funcionais
+#
+#
+#
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+RF-001 | Permitir que o usuário se cadastre como estudante (usuário padrão) ou motorista.| Alta
+RF-002| Permitir que motoristas cadastrem as rotas que eles passam. | Baixa
+RF-003 | Permitir que estudantes procurem motoristas que passam perto ou passem por suas casas. | Media
+RF-004 | Permitir que usuário possa ver a qual o ponto mais próximo que o motorista passa da sua casa. | Baixa
+RF-005 | Permitir que estudante passe entre em contato com motorista. | Alta
+RF-006 | Permitir que motorista e estudante vejam o histórico de pessoas que eles entraram em contato. | Baixa
+RF-007 | Permitir que motoristas coloque a quantidade de pessoas na van.| Medio
+RF-008 | Avaliação de motoristas para estudantes.| Baixo
+RF-009 | Avaliação de estudantes para motoristas.| Baixo
+RF-0010 | Mostrar horário que motorista passa na faculdade (com margem de atraso)s.| Medio
+
+#
+#
+#
 
 
 ### Requisitos não Funcionais
-
+#
+#
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-> Com base nas Histórias de Usuário, enumere os requisitos da sua
-> solução. Classifique esses requisitos em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na
->   plataforma (ex: cadastro de usuário).
->
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade,
->   desempenho, confiabilidade, segurança ou outro (ex: suporte a
->   dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma
-> característica alvo da sua solução. Além disso, certifique-se de que
-> todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-> 
-> **Links Úteis**:
-> 
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
-
+RNF-001 | Login deve ter autenticação de dois fatores.| Baixa
+RNF-002| Sistema deve ser totalmente responsivo. | Alta
+RNF-003 | O cadastro não precisa ser feito todo de uma vez. | Baixa
+RNF-004 | Animação da rota do motorista. | Baixa
+RNF-005 | Chat in plataforma para comunicação de estudante de motorista. | Medio
+RNF-006 | A plataforma contará com um acompanhamento para os pais | Baixa
+RNF-007 | Motoristas com melhores avaliações ficam nas melhores posições.| Baixa
+RNF-008 | Motoristas com notas menores ficam nas piores posições| Baixa
+RNF-009 | Estudantes com avaliações ruins veem mais motoristas com avaliações ruins | Baixa
+RNF-0010 | Motoristas ou estudantes com muitas denúncias são bloqueados da plataforma | Baixa
+#
+#
 ## Restrições
-
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+#
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-> Enumere as restrições à sua solução. Lembre-se de que as restrições
-> geralmente limitam a solução candidata.
-> 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|01| Deve-se respeitar cada sprint |
+|02| Todas as telas devem estar parcialmente responsivas  |
+|03| Não se deve armazenar dados sensíveis. |
+|04| As vans devem estar com todos os documentos em dia  |
+|05| As vans devem ter lugares disponíveis  |
+#
+#
 
 
 # Projeto de Interface
