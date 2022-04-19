@@ -53,71 +53,35 @@ Os membros do grupo são:
 
 ## Problema
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Conforme a realização de pesquisas, através de relatos e por via de portais de notícias, foi observado que muitos universitários e pais sofrem com o problema de encontrar vans universitárias disponíveis para os seus turnos e bairros, para os levarem de sua residência ao local de ensino e vice e versa.
 
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos.
->
-> Nesse momento, o grupo pode optar por fazer uso
-> de ferramentas como Design Thinking, que permite um olhar de ponta a
-> ponta para o problema.
->
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Segundo o portal de notícias, O TEMPO, os motoristas de vans universitárias foram um dos públicos mais afetados pela atual pandemia do COVID-19, pois por conta da paralisação total das escolas/universidades, os motoristas acabaram perdendo muitos dos seus clientes e ficando estagnados na atual crise.
+
+Ainda hoje esse problema não foi totalmente solucionado, pois por conta da lenta volta do modelo de ensino totalmente presencial das escolas e universidades, os motoristas de van ainda não conseguiram se firmar totalmente novamente, por conta do preço da gasolina e da pouca demanda que estão recebendo.
 
 ## Objetivos
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Nosso objetivo é trazer uma aplicação que forneça mais visibilidade para os motoristas de vans universitárias através de um catálogo onde será mostrado o seu serviço, com isso, buscamos trazer mais opções de vans para os universitários, levando em conta, a dificuldade encontrada pelos mesmos ao tentarem achar vans para a suas residências.
 
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também alguns (pelo menos 2) objetivos
-> específicos dependendo de onde você vai querer concentrar a sua
-> prática investigativa, ou como você vai aprofundar no seu trabalho.
-> 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Buscamos levar mais valor ao motorista além da visibilidade que irá atingir, um dos nossos objetivos é melhorar a gestão dos seus passageiros da van, entregando assim, uma listagem de passageiros matriculados na van e uma lista de presença, para que o motorista da van possa ter essas informações de fácil acesso.
+
+Para a segurança de todos, será exigido que todos os motoristas estejam devidamente regularizados com suas licenças e documentos do veículo, para que, os universitários tenham total segurança no serviço que estarão contratando.
 
 ## Justificativa
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Por conta da atual pandemia que o mundo está passando, o serviço de transportes particulares foi bastante afetado, com base nisso, o projeto de Vans Universitária busca reerguer esse serviço que é de extrema importância para os alunos que possuem dificuldades com o meio de transporte público e buscam maior conforto/facilidade nessa retomada de semestre presencial.
 
-> Descreva a importância ou a motivação para trabalhar com esta aplicação
-> que você escolheu. Indique as razões pelas quais você escolheu seus
-> objetivos específicos ou as razões para aprofundar em certos aspectos
-> do software.
-> 
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e
-> dados estatísticos, que podem ser apresentados, com o objetivo de
-> esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Além disso, essa aplicação é muito importante para os motoristas de van universitárias que foram obrigados a parar de trabalhar com esse serviço com o decorrer da pandemia, e com o retorno às aulas ainda enfrentam dificuldades em voltar por conta da baixa demanda que recebem.
+
+Segundo o portal de notícias G1, mesmo com lei mais rígida, vans e carros ainda fazem transporte clandestino em Belo Horizonte, e com os pontos de ônibus lotados, muitas pessoas escolhem os meios de transporte clandestinos que por muitas vezes não seguem os protocolos de segurança contra o COVID-19, não possuem a manutenção correta do veículo, a habilitação e licenças do motoristas são irregulares, além das condições precárias do veículos que não oferecem o mínimo de segurança ao passageiro.
 
 ## Público-Alvo
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Nós possuímos dois públicos-alvos e são eles:
 
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os
-> diferentes perfis. O objetivo aqui não é definir quem serão os
-> clientes ou quais serão os papéis dos usuários na aplicação. A ideia
-> é, dentro do possível, conhecer um pouco mais sobre o perfil dos
-> usuários: conhecimentos prévios, relação com a tecnologia, relações
-> hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição
-> textual, ou diagramas de personas, mapa de stakeholders, ou como o
-> grupo achar mais conveniente.
-> 
-> **Links Úteis**:
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Universitários: Jovens em média de 17 à 25 anos que estão graduando em alguma universidade que necessitam de outro meio de transporte além do transporte público ou carro de aplicativo para a sua locomoção diária da faculdade para a casa e vice e versa, por conta, de dificuldades orçamentais e de trajetória que esses outros meios oferecem.
+
+Motoristas de Van: Motoristas de van universitária que estejam com dificuldades em encontrar alunos da universidade para preencher as vagas do seu veículos.
  
 # Especificações do Projeto
 
@@ -129,31 +93,10 @@ Os membros do grupo são:
 
 ## Personas e Mapas de Empatia
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Foram definidas quatro personas, com base em nossas pesquisas de campos e por meio de notícias, são elas:
 
-
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que 
-> você deve ser enumerar e descrever precisamente e de forma
-> personalizada todos os principais envolvidos com a solução almeja. 
-> 
-> Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
->
-> **Links Úteis**:
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Como fazer um mapa de empatia - Vídeo](https://www.youtube.com/watch?v=JlKHGpVoA2Y)
-> 
-> 
-> **Exemplo de Persona**
-> 
-> ![Exemplo de Persona](imaages/../images/persona.png)
-> 
-> Fonte: [Como criar uma persona para o seu negócio](https://raissaviegas.com.br/como-criar-uma-persona/)
-
+![Sprint 1 - Processo de Design Thinking - Frame 5](https://user-images.githubusercontent.com/99363911/164113257-8acd7844-4e2e-4dc0-a49b-53212697e4a3.jpg)
+![Sprint 1 - Processo de Design Thinking - Frame 4](https://user-images.githubusercontent.com/99363911/164113274-59fc488b-951a-4d1c-858d-452349fcc8a1.jpg)
 
 ## Histórias de Usuários
 
