@@ -8,7 +8,7 @@
 </head>
 
 <body onload="init()">
-    <h1>Cadastro de Contatos (CRUD)</h1>
+    <h1>Cadastro de van</h1>
 
     <div class="container">
         <div class="row">
@@ -44,21 +44,11 @@
                     <input type="text" class="form-control" id="inputCidade" placeholder="Informe a cidade do contato">
                 </div>
                 <div class="col-sm-6">
-                    <label for="inputCategoria">Categoria</label>
-                    <input type="text" class="form-control" id="inputCategoria" required placeholder="Informe a categoria do contato">
+                    <label for="inputTurno">Turno</label>
+                    <input type="text" class="form-control" id="inputTurno" required placeholder="Informe o turno que irá trabalhar">
                 </div>
             </div>
-            <div class="form-group row">
-                <div class="col-sm-12">
-                    <label for="inputSite">Web Site (*)</label>
-                    <input type="text" class="form-control" id="inputSite" required placeholder="Web Site">
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-4">
-                    <small>(*) Campos obrigatórios</small>
-                </div>
-            </div>
+
             <div class="form-group row">
                 <div class="col-sm-12">
                     <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
@@ -80,14 +70,12 @@
                             <th scope="col">Telefone</th>
                             <th scope="col">E-mail</th>
                             <th scope="col">Cidade</th>
-                            <th scope="col">Categoria</th>
-                            <th scope="col">Site</th>
+                            <th scope="col">Turno</th>
                         </tr>
                     </thead>
                     <tbody id="table-contatos">
                         <tr>
                             <td scope="row">1</td>
-                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -115,8 +103,7 @@
                                                 <td>${contato.telefone}</td>
                                                 <td>${contato.email}</td>
                                                 <td>${contato.cidade}</td>
-                                                <td>${contato.categoria}</td>
-                                                <td>${contato.website}</td>
+                                                <td>${contato.turno}</td>
                                             </tr>`);
             }
         }
@@ -135,15 +122,13 @@
                 let campoTelefone = $("#inputTelefone").val();
                 let campoEmail = $('#inputEmail').val();
                 let campoCidade = $("#inputCidade").val();
-                let campoCategoria = $('#inputCategoria').val();
-                let campoSite = $('#inputSite').val();
+                let campoTurno = $('#inputTurno').val();
                 let contato = {
                     nome: campoNome,
                     telefone: campoTelefone,
                     email: campoEmail,
                     cidade: campoCidade,
-                    categoria: campoCategoria,
-                    website: campoSite
+                    Turno: campoTurno,
                 };
 
                 insertContato(contato);
@@ -167,15 +152,13 @@
                 let campoTelefone = $("#inputTelefone").val();
                 let campoEmail = $("#inputEmail").val();
                 let campoCidade = $("#inputCidade").val();
-                let campoCategoria = $("#inputCategoria").val();
-                let campoSite = $('#inputSite').val();
+                let campoTurno = $("#inputTurno").val();
                 let contato = {
                     nome: campoNome,
                     telefone: campoTelefone,
                     email: campoEmail,
                     cidade: campoCidade,
-                    categoria: campoCategoria,
-                    website: campoSite
+                    Turno: campoTurno,
                 };
 
                 updateContato(parseInt(campoId), contato);
@@ -227,8 +210,7 @@
                 $("#inputTelefone").val(colunas[2].innerText);
                 $("#inputEmail").val(colunas[3].innerText);
                 $("#inputCidade").val(colunas[4].innerText);
-                $("#inputCategoria").val(colunas[5].innerText);
-                $("#inputSite").val(colunas[6].innerText);
+                $("#inputTurno").val(colunas[5].innerText);
             });
 
             exibeContatos();
