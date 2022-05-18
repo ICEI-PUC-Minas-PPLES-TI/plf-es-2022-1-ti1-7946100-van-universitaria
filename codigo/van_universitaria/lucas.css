@@ -1,0 +1,96 @@
+#login {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#login img {
+    width: 17%;
+}
+
+#login .text-info {
+    color: #000 !important;
+}
+
+.entrar {
+    background: #5cff00;
+    color: #000;
+    font-family: Montserrat;
+    font-weight: 700;
+    border: 0px !important;
+    transition: 0.4s;
+    width: 40%;
+    padding: 2% 0%;
+}
+
+.entrar:hover {
+    background: #000;
+    color: #fff!important;
+    transition: 0.4s;
+}
+
+.cadastrar {
+    background: red;
+    color: #000;
+    font-family: Montserrat;
+    font-weight: 700;
+    border: 0px !important;
+    transition: 0.4s;
+    width: 40%;
+    padding: 2% 0%;
+}
+
+.cadastrar:hover {
+    background: #000;
+    color: #fff!important;
+    transition: 0.4s;
+}
+
+#btn_salvar {
+    background: #5cff00;
+    color: #000;
+    transition: 0.4s;
+}
+
+#btn_salvar:hover {
+    background: #000;
+    color: #fff!important;
+    transition: 0.4s;
+}
+
+.btn.btn-secondary {
+    background: red;
+    color: #000;
+    transition: 0.4s;
+}
+
+.btn.btn-secondary:hover {
+    background: #000;
+    color: #fff!important;
+    transition: 0.4s;
+}
+
+.container-login {
+    width: 700px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #00000026;
+    padding: 5em;
+    margin: 0% auto;
+}
+
+@media (max-width: 600px) {
+    #login img {
+        width: 50%;
+    }
+    .entrar {
+        width: 100%;
+    }
+    .cadastrar {
+        width: 100%;
+    }
+}

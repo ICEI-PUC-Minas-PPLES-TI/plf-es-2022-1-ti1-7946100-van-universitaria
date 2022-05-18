@@ -1,0 +1,84 @@
+/*Listagem de contatos*/
+
+label {
+    font-weight: bolder;
+}
+
+::placeholder {
+    color: 000 !important;
+    opacity: 3;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: 000 !important;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: 000 !important;
+    opacity: 3;
+}
+
+h1 {
+    text-align: center;
+}
+
+#msg {
+    height: 60px;
+}
+
+#grid-contatos tbody {
+    cursor: pointer;
+}.menu {
+    background-color: #000;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+
+}
+ .menuUL {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ }
+.menu img {
+    width: 100%;
+    object-fit: contain;
+    max-width: 150px;
+    height: 50px;
+}
+
+.menu ul {
+    margin: 0px;
+}
+
+.menu li {
+    display: inline-block;
+    color: #fff;
+    padding: 0px 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.menu li a {
+    color: #fff;
+}
+
+
+h1.titleh1 { 
+        font-size: 26px;
+        font-weight: bold;
+        padding: 24px 0% 24px 0%;
+        width: 350px;
+        color: #000;
+        margin: 40px auto 20px auto;
+        border-bottom: 2px solid #000;
+    
+}
+
+.center{
+    text-align: center;
+}
