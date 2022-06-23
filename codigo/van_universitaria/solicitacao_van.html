@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vans disponiveis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="caio.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <header>
+        <div class="col-sm-12 menu  ">
+
+            <div class="container flex">
+                <div class="row">
+                    <div class="col-sm-4 center">
+                        <img src="img/logo.png" alt="aslogo" id="aslogo">
+                    </div>
+                    <div class="col-sm-8 menuUL">
+                        <ul>
+                            <li>
+                                Inicio
+                            </li>
+                            <li>
+                                <a href="lista-van.html" rel="noopener noreferrer"> Vans disponiveis</a>
+                            </li>
+                            <li>
+                                <a href="cadastro-van.html"> Cadastrar minha van</a>
+                            </li>
+                            <li>
+                                Perfil
+                            </li>
+                            <li>
+                                Sair
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+</head>
+
+<body onload="ShowVan()">
+
+
+    <div class="container center">
+        <div id="infoVan" class="col-sm-12 boxTudo">
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="js/van_controller.js"></script>
+    <script>
+
+
+
+        function ShowVan(index) {
+            let van = JSON.parse(localStorage.getItem('info_van'));
+           
+            $("#infoVan").append(`
+                <h1 class="titleh1">${van.nome}</h1>
+
+                <div class="col-sm-6">
+                <h2>Turno:</h2>
+                <p>${van.turno}</p>
+                </div>
+
+                <div class="col-sm-6">
+                <h2>Cidade:</h2>
+                <p>${van.cidade}</p>
+                </div>
+
+                <div class="col-sm-6">
+                <h2>Telefone:</h2>
+                <p>${van.telefone}</p>
+                </div>
+
+                <div class="col-sm-6">
+                <h2>Email:</h2>
+                <p>${van.email}</p>
+                </div>
+
+                <div class="col-sm-12">
+                    <br><br>
+                <input onclick="sendSolicitacao('${van.id}')" type="button" class="btn btn-success" value="Solicitar Carona">
+            </div>
+                
+                `);
+        }
+     
+    </script>
+
+</body>
+
+</html>

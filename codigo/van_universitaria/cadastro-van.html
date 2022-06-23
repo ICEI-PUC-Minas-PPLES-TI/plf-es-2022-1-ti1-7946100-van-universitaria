@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title >Cadastro de Van</title>
+    <title>Cadastro de Van</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -23,7 +23,7 @@
                                 Inicio
                             </li>
                             <li>
-                                <a href="lista-van.html"  rel="noopener noreferrer"> Vans disponiveis</a>
+                                <a href="lista-van.html" rel="noopener noreferrer"> Vans disponiveis</a>
                             </li>
                             <li>
                                 <a href="cadastro-van.html"> Cadastrar minha van</a>
@@ -81,7 +81,8 @@
                 </div>
                 <div class="col-sm-6">
                     <label for="inputTurno">Turno</label>
-                    <input type="text" class="form-control" id="inputTurno" required placeholder="Informe o turno que irá trabalhar">
+                    <input type="text" class="form-control" id="inputTurno" required
+                        placeholder="Informe o turno que irá trabalhar">
                 </div>
             </div>
 
@@ -91,7 +92,8 @@
                     <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
                     <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
                     <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
-                    <a href="lista_vans.html"><input type="button" class="btn btn-warning" id="btnClear" value="Pesquisar vans"></a>
+                    <a href="lista_vans.html"><input type="button" class="btn btn-warning" id="btnClear"
+                            value="Pesquisar vans"></a>
                 </div>
             </div>
         </form>
@@ -125,7 +127,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <script src="js/van_controller.js"></script>
     <script>
         function exibevans() {
             $("#table-vans").html("");
@@ -133,24 +135,25 @@
 
             for (i = 0; i < db_van.data.length; i++) {
                 let van = db_van.data[i];
-                $("#table-vans").append(`<tr><td scope="row">${van.id}</td>
-                                                <td>${van.nome}</td>
-                                                <td>${van.telefone}</td>
-                                                <td>${van.email}</td>
-                                                <td>${van.cidade}</td>
-                                                <td>${van.turno}</td>
-                                            </tr>`);
+                $("#table-vans").append(`<tr>
+                    <td scope="row">${van.id}</td>
+                    <td>${van.nome}</td>
+                    <td>${van.telefone}</td>
+                    <td>${van.email}</td>
+                    <td>${van.cidade}</td>
+                    <td>${van.turno}</td>
+                    </tr>`);
             }
         }
 
         function init() {
-            $("#btnInsert").click(function() {
+            $("#btnInsert").click(function () {
                 if (!$('#form-van')[0].checkValidity()) {
                     displayMessage("Preencha o formulário corretamente.");
                     return;
                 }
 
-       
+
                 let campoNome = $("#inputNome").val();
                 let campoTelefone = $("#inputTelefone").val();
                 let campoEmail = $('#inputEmail').val();
@@ -171,7 +174,7 @@
                 $("#form-van")[0].reset();
             });
 
-            $("#btnUpdate").click(function() {
+            $("#btnUpdate").click(function () {
                 let campoId = $("#inputId").val();
                 if (campoId == "") {
                     displayMessage("Selecione um van para ser alterado.");
@@ -192,14 +195,14 @@
 
                 updatevan(parseInt(campoId), van);
 
-               
+
                 exibevans();
 
-               
+
                 $("#form-van")[0].reset();
             });
 
-            $("#btnDelete").click(function() {
+            $("#btnDelete").click(function () {
                 let campoId = $("#inputId").val();
                 if (campoId == "") {
                     displayMessage("Selecione um van a ser excluído.");
@@ -207,29 +210,29 @@
                 }
                 deletevan(parseInt(campoId));
 
-                
+
                 exibevans();
 
-                
+
                 $("#form-van")[0].reset();
             });
 
-           
-            $("#btnClear").click(function() {
+
+            $("#btnClear").click(function () {
                 $("#form-van")[0].reset();
             });
 
-            
-            $('#msg').bind("DOMSubtreeModified", function() {
-                window.setTimeout(function() {
-                    $(".alert").fadeTo(500, 0).slideUp(500, function() {
+
+            $('#msg').bind("DOMSubtreeModified", function () {
+                window.setTimeout(function () {
+                    $(".alert").fadeTo(500, 0).slideUp(500, function () {
                         $(this).remove();
                     });
                 }, 5000);
             });
 
-           
-            $("#grid-vans").on("click", "tr", function(e) {
+
+            $("#grid-vans").on("click", "tr", function (e) {
                 let linhavan = this;
                 colunas = linhavan.querySelectorAll("td");
 

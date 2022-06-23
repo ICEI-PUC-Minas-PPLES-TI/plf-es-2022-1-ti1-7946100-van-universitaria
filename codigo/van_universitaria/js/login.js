@@ -51,6 +51,7 @@ function initLoginApp() {
 
 
 function loginUser(login, senha) {
+    initLoginApp();
     for (var i = 0; i < db_usuarios.usuarios.length; i++) {
         var usuario = db_usuarios.usuarios[i];
 
@@ -59,6 +60,8 @@ function loginUser(login, senha) {
             usuarioCorrente.login = usuario.login;
             usuarioCorrente.email = usuario.email;
             usuarioCorrente.nome = usuario.nome;
+            usuarioCorrente.telefone = usuario.telefone;
+            usuarioCorrente.endereco = usuario.endereco;
 
             sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
 

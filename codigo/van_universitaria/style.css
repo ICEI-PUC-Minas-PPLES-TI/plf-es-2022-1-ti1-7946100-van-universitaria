@@ -40,7 +40,25 @@ input {
     font-weight: 400;
     color: #000!important;
 }
-
+.boxTudo {
+    margin: 53px 0 0 0;
+    padding: 0% 0% 35px 0%;
+    border-radius: 14px;
+    border: solid 1px #2d2d2d;
+    box-shadow: 2px 7px 0px 0px #2d2d2d;
+}.boxTudo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px 0% 0px 0%;
+    color: #2d2d2d;
+    margin: 20px auto 10px auto;
+}
+.boxTudo p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2d2d2d;
+    margin: 0% 0% 1% 0%;
+}
 @media (max-width: 600px) {
     .container-login {
         padding: 1em!important;
