@@ -20,7 +20,7 @@ var usuarioCorrente = {};
 function generateUUID() { // Public Domain/MIT
     var d = new Date().getTime(); //Timestamp
     var d2 = (performance && performance.now && (performance.now() * 1000)) || 0; //Time in microseconds since page-load or 0 if unsupported
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
         var r = Math.random() * 16; //random number between 0 and 16
         if (d > 0) { //Use timestamp until depleted
             r = (d + r) % 16 | 0;
@@ -108,11 +108,11 @@ function logoutUser() {
     window.location = LOGIN_URL;
 }
 
-function addUser(nome, login, senha, email) {
+function addUser(nome, login, senha, email, endereco) {
 
     // Cria um objeto de usuario para o novo usuario 
     let newId = generateUUID();
-    let usuario = { "id": newId, "login": login, "senha": senha, "nome": nome, "email": email };
+    let usuario = { "id": newId, "login": login, "senha": senha, "nome": nome, "email": email, 'endereco': endereco, "solicitacoes": "","VanCadastrada":"" };
 
     // Inclui o novo usuario no banco de dados baseado em JSON
     db_usuarios.usuarios.push(usuario);
