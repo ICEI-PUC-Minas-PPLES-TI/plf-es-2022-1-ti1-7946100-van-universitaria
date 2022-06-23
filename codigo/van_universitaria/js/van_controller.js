@@ -114,7 +114,7 @@ function inserir_van(van) {
     };
 
     db_van.data.push(nova_van);
-    displayMessage("Van inserido com sucesso");
+    alert("Van inserido com sucesso");
 
     localStorage.setItem('db_van', JSON.stringify(db_van));
 }
@@ -128,7 +128,7 @@ function update_van(id, van) {
         db_van.data[index].cidade = van.cidade,
         db_van.data[index].turno = van.turno,
 
-        displayMessage("van alterada com sucesso");
+        alert("van alterada com sucesso");
 
     localStorage.setItem('db_van', JSON.stringify(db_van));
 }
@@ -136,27 +136,32 @@ function update_van(id, van) {
 function delete_van(id) {
     db_van.data = db_van.data.filter(function (element) { return element.id != id });
 
-    displayMessage("van removida com sucesso");
+    alert("van removida com sucesso");
 
     localStorage.setItem('db_van', JSON.stringify(db_van));
 }
 
 function sendSolicitacao(idVan) {
     usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+    var listaVans = JSON.parse(localStorage.getItem('db_van'));
 
-    db_van.data.forEach(van => {
+    console.log(listaVans)
+    listaVans.data.forEach((van, index) => {
         if (idVan == van.id) {
             var newSolicitacao = van;
-            var solicitacaoVan = JSON.parse(newSolicitacao.solicitacoes)
-         
-            db_van.data = db_van.data.filter(function (element) { return element.id != van.id });
-            localStorage.setItem('db_van', JSON.stringify(db_van));
 
-            solicitacaoVan.push(usuarioCorrenteJSON);            
+
+            if (typeof newSolicitacao.solicitacoes === 'string') {
+                var solicitacaoVan = JSON.parse(newSolicitacao.solicitacoes)
+            } else {
+                var solicitacaoVan = newSolicitacao.solicitacoes
+            }
+            solicitacaoVan.push(usuarioCorrenteJSON);
             newSolicitacao.solicitacoes = solicitacaoVan;
-            db_van.data.push(newSolicitacao);
-            localStorage.setItem('db_van', JSON.stringify(db_van));
-            console.log(db_van.data)
+            listaVans.data[index] = newSolicitacao;
+            localStorage.setItem('db_van', JSON.stringify(listaVans));
+            alert("Solicitação enviada com sucesso");
+
         }
 
     });
