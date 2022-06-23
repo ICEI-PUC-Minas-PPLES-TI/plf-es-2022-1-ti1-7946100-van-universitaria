@@ -49,11 +49,11 @@
     <div class="container">
         <div class="row">
             <div id="msg" class="col-sm-10 offset-sm-1 ">
-                <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+                <!--<div class="alert alert-warning">van não encontrado.</div>-->
             </div>
         </div>
 
-        <form id="form-contato">
+        <form id="form-van">
             <div class="form-group row">
                 <div class="col-sm-4">
                     <label for="inputId">Id</label>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-sm-8">
                     <label for="inputNome">Nome (*)</label>
-                    <input type="text" class="form-control" id="inputNome" required placeholder="Informe o nome do contato">
+                    <input type="text" class="form-control" id="inputNome" required placeholder="Informe o nome do van">
                 </div>
             </div>
             <div class="form-group row">
@@ -77,7 +77,7 @@
             <div class="form-group row">
                 <div class="col-sm-6">
                     <label for="inputCidade">Cidade</label>
-                    <input type="text" class="form-control" id="inputCidade" placeholder="Informe a cidade do contato">
+                    <input type="text" class="form-control" id="inputCidade" placeholder="Informe a cidade do van">
                 </div>
                 <div class="col-sm-6">
                     <label for="inputTurno">Turno</label>
@@ -91,14 +91,14 @@
                     <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
                     <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
                     <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
-                    <a href="lista_contatos.html"><input type="button" class="btn btn-warning" id="btnClear" value="Pesquisar Contatos"></a>
+                    <a href="lista_vans.html"><input type="button" class="btn btn-warning" id="btnClear" value="Pesquisar vans"></a>
                 </div>
             </div>
         </form>
 
         <div class="row">
             <div class="col-sm-12">
-                <table id="grid-contatos" class="table table-striped">
+                <table id="grid-vans" class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -109,7 +109,7 @@
                             <th scope="col">Turno</th>
                         </tr>
                     </thead>
-                    <tbody id="table-contatos">
+                    <tbody id="table-vans">
                         <tr>
                             <td scope="row">1</td>
                             <td></td>
@@ -127,39 +127,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="app.js"></script>
     <script>
-        function exibeContatos() {
-            // Remove todas as linhas do corpo da tabela
-            $("#table-contatos").html("");
+        function exibevans() {
+            $("#table-vans").html("");
 
-            // Popula a tabela com os registros do banco de dados
-            for (i = 0; i < db.data.length; i++) {
-                let contato = db.data[i];
-                $("#table-contatos").append(`<tr><td scope="row">${contato.id}</td>
-                                                <td>${contato.nome}</td>
-                                                <td>${contato.telefone}</td>
-                                                <td>${contato.email}</td>
-                                                <td>${contato.cidade}</td>
-                                                <td>${contato.turno}</td>
+
+            for (i = 0; i < db_van.data.length; i++) {
+                let van = db_van.data[i];
+                $("#table-vans").append(`<tr><td scope="row">${van.id}</td>
+                                                <td>${van.nome}</td>
+                                                <td>${van.telefone}</td>
+                                                <td>${van.email}</td>
+                                                <td>${van.cidade}</td>
+                                                <td>${van.turno}</td>
                                             </tr>`);
             }
         }
 
         function init() {
-            // Adiciona funções para tratar os eventos 
             $("#btnInsert").click(function() {
-                // Verfica se o formulário está preenchido corretamente
-                if (!$('#form-contato')[0].checkValidity()) {
+                if (!$('#form-van')[0].checkValidity()) {
                     displayMessage("Preencha o formulário corretamente.");
                     return;
                 }
 
-                // Obtem os valores dos campos do formulário
+       
                 let campoNome = $("#inputNome").val();
                 let campoTelefone = $("#inputTelefone").val();
                 let campoEmail = $('#inputEmail').val();
                 let campoCidade = $("#inputCidade").val();
                 let campoTurno = $('#inputTurno').val();
-                let contato = {
+                let van = {
                     nome: campoNome,
                     telefone: campoTelefone,
                     email: campoEmail,
@@ -167,21 +164,17 @@
                     turno: campoTurno,
                 };
 
-                insertContato(contato);
+                insertvan(van);
 
-                // Reexibe os contatos
-                exibeContatos();
+                exibevans();
 
-                // Limpa o formulario
-                $("#form-contato")[0].reset();
+                $("#form-van")[0].reset();
             });
 
-            // Intercepta o click do botão Alterar
             $("#btnUpdate").click(function() {
-                // Obtem os valores dos campos do formulário
                 let campoId = $("#inputId").val();
                 if (campoId == "") {
-                    displayMessage("Selecione um contato para ser alterado.");
+                    displayMessage("Selecione um van para ser alterado.");
                     return;
                 }
                 let campoNome = $("#inputNome").val();
@@ -189,7 +182,7 @@
                 let campoEmail = $("#inputEmail").val();
                 let campoCidade = $("#inputCidade").val();
                 let campoTurno = $("#inputTurno").val();
-                let contato = {
+                let van = {
                     nome: campoNome,
                     telefone: campoTelefone,
                     email: campoEmail,
@@ -197,37 +190,36 @@
                     turno: campoTurno,
                 };
 
-                updateContato(parseInt(campoId), contato);
+                updatevan(parseInt(campoId), van);
 
-                // Reexibe os contatos
-                exibeContatos();
+               
+                exibevans();
 
-                // Limpa o formulario
-                $("#form-contato")[0].reset();
+               
+                $("#form-van")[0].reset();
             });
 
-            // Intercepta o click do botão Excluir
             $("#btnDelete").click(function() {
                 let campoId = $("#inputId").val();
                 if (campoId == "") {
-                    displayMessage("Selecione um contato a ser excluído.");
+                    displayMessage("Selecione um van a ser excluído.");
                     return;
                 }
-                deleteContato(parseInt(campoId));
+                deletevan(parseInt(campoId));
 
-                // Reexibe os contatos
-                exibeContatos();
+                
+                exibevans();
 
-                // Limpa o formulario
-                $("#form-contato")[0].reset();
+                
+                $("#form-van")[0].reset();
             });
 
-            // Intercepta o click do botão Listar Contatos
+           
             $("#btnClear").click(function() {
-                $("#form-contato")[0].reset();
+                $("#form-van")[0].reset();
             });
 
-            // Oculta a mensagem de aviso após alguns segundos
+            
             $('#msg').bind("DOMSubtreeModified", function() {
                 window.setTimeout(function() {
                     $(".alert").fadeTo(500, 0).slideUp(500, function() {
@@ -236,10 +228,10 @@
                 }, 5000);
             });
 
-            // Preenche o formulário quando o usuario clicar em uma linha da tabela 
-            $("#grid-contatos").on("click", "tr", function(e) {
-                let linhaContato = this;
-                colunas = linhaContato.querySelectorAll("td");
+           
+            $("#grid-vans").on("click", "tr", function(e) {
+                let linhavan = this;
+                colunas = linhavan.querySelectorAll("td");
 
                 $("#inputId").val(colunas[0].innerText);
                 $("#inputNome").val(colunas[1].innerText);
@@ -249,7 +241,7 @@
                 $("#inputTurno").val(colunas[5].innerText);
             });
 
-            exibeContatos();
+            exibevans();
         }
     </script>
 </body>
