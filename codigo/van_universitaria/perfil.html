@@ -46,7 +46,7 @@
 </head>
 
 <body onload="ListaPerfil()">
-    <h1 class="titleh1">Meu Perfil</h1>
+    <h1 class="titleh1">Perfils de usuário</h1>
 
     <div class="container">
 
@@ -64,8 +64,8 @@
                 <table id="grid-contatos" class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Usuário</th>
+                            <th scope="col">Login</th>
+                            <th scope="col">E-mail</th>
                             <th scope="col">Nome completo</th>
                             <th scope="col">Endereço</th>
                             <th scope="col">Senha</th>
@@ -81,24 +81,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="js/login.js"></script>
     <script>
-        function ListaPerfil(login, senha) {
+        function ListaPerfil(nome, login, senha, email, endereco) {
             // Remove todas as linhas do corpo da tabela
             $("#table-perfil").html("");
 
+            for (var i = 0; i < db_usuarios.usuarios.length; i++) {
+                var usuario = db_usuarios.usuarios[i];
+                usuarioCorrente.id = usuario.id;
+                usuarioCorrente.login = usuario.login;
+                usuarioCorrente.email = usuario.email;
+                usuarioCorrente.nome = usuario.nome;
+                usuarioCorrente.endereco = usuario.endereco;
+                usuarioCorrente.senha = usuario.senha;
 
 
-            // Popula a tabela com os registros do banco de dados
-            for (i = 0; i < db.data.length; i++) {
-                let contatoperfil = db.data[i];
-
-                $("#table-perfil").append(`<tr><td scope="row">${contatoperfil.newId}</td>
-                                                <td>${contatoperfil.login}</td>
-                                                <td>${contatoperfil.nome}</td>
-                                                <td>${contatoperfil.endereco}</td>
-                                                <td>${contatoperfil.cidade}</td>
-                                                <td>${contatoperfil.senha}</td>
+                $("#table-perfil").append(`<tr>
+                                                <td>${usuario.login}</td>
+                                                <td>${usuario.email}</td>
+                                                <td>${usuario.nome}</td>
+                                                <td>${usuario.endereco}</td>
+                                                <td>${usuario.senha}</td>
                                             </tr>`);
+
             }
+
+            console.log(usuario.login);
+
         }
     </script>
 
