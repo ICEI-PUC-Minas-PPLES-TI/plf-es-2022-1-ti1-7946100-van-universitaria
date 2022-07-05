@@ -226,24 +226,19 @@ Membros responsáveis: Lucas Mattos Rodrigues e Caio Henrique Miranda dos Reis
 
 # Projeto da Solução
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
 ## Tecnologias Utilizadas
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### HTML
+Utilizado para construir os elementos visuais da aplicação web.
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
+### CSS
+Utilizado para estilizar os componentes visuais da aplicação web.
+
+### JS
+Utilizado para realizar as funções e funcionalidades da aplicação web.
+
+### JSON
+Utilizado para salvar os dados em Local Storage.
 
 ## Arquitetura da solução
 
