@@ -181,22 +181,17 @@ Nesta tela os motoristas de vans universitárias poderão cadastrar o seu servi�
 
 ## Wireframes
 
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
+![LoginCadastro](https://user-images.githubusercontent.com/99363911/177234398-c1f8f0e6-99ef-4331-9d91-e2369c37cc05.jpg)
 
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante ao
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> 
-> **Exemplo**:
-> 
-> ![Exemplo de Wireframe](images/wireframe-example.png)
+![Perfil do motorista](https://user-images.githubusercontent.com/99363911/177234535-a877e05e-b543-4ab3-a591-806ff381141c.jpg)
+
+![ListagemVan](https://user-images.githubusercontent.com/99363911/177234539-0509b1db-d7b9-4d6f-840b-f91e45a8b5b6.jpg)
+
+![PerfilUsuario](https://user-images.githubusercontent.com/99363911/177234541-8111d28a-afd6-4eb0-a16c-fc1b00f7810d.jpg)
+
+![Perfil da Van](https://user-images.githubusercontent.com/99363911/177234597-ef37bc12-1dca-462c-9ba4-8dde3145188f.jpg)
+
+![Perfil do motorista](https://user-images.githubusercontent.com/99363911/177234604-8708e513-7b1e-49cf-81df-ee020d1a50db.jpg)
 
 
 # Metodologia
