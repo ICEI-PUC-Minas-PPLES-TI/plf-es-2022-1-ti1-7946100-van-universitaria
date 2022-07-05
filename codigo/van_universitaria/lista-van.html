@@ -102,10 +102,11 @@
     <script>
 
         function ListarVans() {
+            getUserVans()
             let fc = document.getElementById('filtro_cidade').value;
             let fcg = document.getElementById('filtro_turno').value;
             $("#table-contatos").empty();
-
+            console.log(db_van)
 
             for (let index = 0; index < db_van.data.length; index++) {
                 const van = db_van.data[index];

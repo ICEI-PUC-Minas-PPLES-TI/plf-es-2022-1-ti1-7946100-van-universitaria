@@ -48,25 +48,19 @@
 </head>
 
 <body onload="ShowVan()">
-
-
     <div class="container center">
         <div id="infoVan" class="col-sm-12 boxTudo">
-
 
         </div>
 
     </div>
 
-
-
-
-
-
-
     <script src="js/van_controller.js"></script>
     <script>
+var usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+    usuarioCorrenteJSON = JSON.parse(usuarioCorrenteJSON)
 
+    console.log(usuarioCorrenteJSON)
 
 
         function ShowVan(index) {

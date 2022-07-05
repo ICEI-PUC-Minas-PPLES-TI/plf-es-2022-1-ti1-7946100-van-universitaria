@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Perfil - Van</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="caio.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <header>
+        <div class="col-sm-12 menu">
+
+            <div class="container flex">
+                <div class="row">
+                    <div class="col-sm-4 center">
+                        <img src="img/logo.png" alt="aslogo" id="aslogo">
+                    </div>
+                    <div class="col-sm-8 menuUL">
+                        <ul>
+                            <li>
+                                Inicio
+                            </li>
+                            <li>
+                                <a href="lista-van.html" rel="noopener noreferrer"> Vans disponiveis</a>
+                            </li>
+                            <li>
+                                <a href="cadastro-van.html"> Cadastrar minha van</a>
+                            </li>
+                            <li>
+                                Perfil
+                            </li>
+                            <li>
+                                Sair
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+</head>
+
+<body onload="ListaPerfil()">
+    <div class="container center">
+        <div id="infoVan" class="col-sm-12 boxTudo">
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <br><br><br>
+        <div class="row">
+            <div class="col-sm-12 ">
+                <h2>Solicitação de caronas:</h2>
+                <table id="grid-contatos" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Endereço</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-perfil">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <br><br><br>
+        <div class="row">
+            <div class="col-sm-12 ">
+                <h2>Suas caronas:</h2>
+                <table id="grid-caronas" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Endereço</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-caronas">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/van_controller.js"></script>
+<script src="js/login.js"></script>
+<script>
+
+    var usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+    usuarioCorrenteJSON = JSON.parse(usuarioCorrenteJSON)
+    function ListaPerfil() {
+        $("#infoVan").append(`
+                <h1 class="titleh1">${usuarioCorrenteJSON.nome}</h1>
+
+                <div class="col-sm-6">
+                <h2>Turno:</h2>
+                <p>${usuarioCorrenteJSON.turno}</p>
+                </div>
+
+                <div class="col-sm-6">
+                <h2>Cidade:</h2>
+                <p>${usuarioCorrenteJSON.cidade}</p>
+                </div>
+
+                <div class="col-sm-6">
+                <h2>Telefone:</h2>
+                <p>${usuarioCorrenteJSON.telefone}</p>
+                </div>
+
+                <div class="col-sm-6">
+                <h2>Email:</h2>
+                <p>${usuarioCorrenteJSON.email}</p>
+                </div>
+
+                <div class="col-sm-12">
+                    <br><br>
+
+            </div>
+                
+                `);
+
+        $("#table-perfil").html("");
+
+        usuarioCorrenteJSON.solicitacoes.forEach((userSolicitacao, index) => {
+            userSolicitacao = JSON.parse(userSolicitacao)
+            $("#table-perfil").append(`<tr>
+                <td>${userSolicitacao.nome}</td>
+                <td>${userSolicitacao.email}</td>
+                <td>${userSolicitacao.endereco}</td>
+                <td><button onclick="acceptInfo(${index})">Aceitar</button>
+                <button onclick="RecusarCarona(${index})">Recusar</button></td>
+                </tr>`);
+        });
+
+        $("#table-caronas").html("");
+
+        usuarioCorrenteJSON.caronas.forEach((caronas, index) => {
+
+            $("#table-caronas").append(`<tr>
+                <td>${caronas.nome}</td>
+                <td>${caronas.email}</td>
+                <td>${caronas.endereco}</td>
+                <td>${caronas.telefone}</td>
+                <td><button onclick="RemoverCarona(${index})">Remover carona</button></td>
+                </tr>`);
+        });
+    }
+
+    function acceptInfo(index) {
+        aceitarCorrida(usuarioCorrenteJSON.solicitacoes[index]);
+        addCaronaUser(usuarioCorrenteJSON.caronas[index])
+        document.location.reload(true)
+    }
+    function RecusarCarona(index) {
+        recusarCorrida(usuarioCorrenteJSON.solicitacoes[index]);
+        removeCaronaUser(usuarioCorrenteJSON.caronas[index])
+        document.location.reload(true)
+    }
+    function RemoverCarona(index) {
+        removeCorrida(usuarioCorrenteJSON.caronas[index]);
+        removeCaronaUser(usuarioCorrenteJSON.caronas[index]);
+        document.location.reload(true)
+    }
+
+</script>
+
+</html>

@@ -1,19 +1,21 @@
 const LOGIN_URL = "login.html";
 
+
+
 var db_usuarios = {};
 
 var usuarioCorrente = {};
 
-function generateUUID() { 
-    var d = new Date().getTime(); 
+function generateUUID() {
+    var d = new Date().getTime();
 
-    var d2 = (performance && performance.now && (performance.now() * 1000)) || 0; 
+    var d2 = (performance && performance.now && (performance.now() * 1000)) || 0;
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-        var r = Math.random() * 16; 
-        if (d > 0) { 
+        var r = Math.random() * 16;
+        if (d > 0) {
             r = (d + r) % 16 | 0;
             d = Math.floor(d / 16);
-        } else { 
+        } else {
             r = (d2 + r) % 16 | 0;
             d2 = Math.floor(d2 / 16);
         }
@@ -31,20 +33,13 @@ const dadosIniciais = {
 
 function initLoginApp() {
 
-    usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
-    if (usuarioCorrenteJSON) {
-        usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
-    }
+    var usuariosJSON = localStorage.getItem('db_usuarios');
 
-   var usuariosJSON = localStorage.getItem('db_usuarios');
-    if (!usuariosJSON) { 
+    if (!usuariosJSON) {
         alert('Dados de usuários não encontrados no localStorage. \n -----> Fazendo carga inicial.');
-
         db_usuarios = dadosIniciais;
-     
         localStorage.setItem('db_usuarios', JSON.stringify(dadosIniciais));
-    } else { 
-
+    } else {
         db_usuarios = JSON.parse(usuariosJSON);
     }
 };
@@ -56,33 +51,69 @@ function loginUser(login, senha) {
         var usuario = db_usuarios.usuarios[i];
 
         if (login == usuario.login && senha == usuario.senha) {
-            usuarioCorrente.id = usuario.id;
-            usuarioCorrente.login = usuario.login;
-            usuarioCorrente.email = usuario.email;
-            usuarioCorrente.nome = usuario.nome;
-            usuarioCorrente.telefone = usuario.telefone;
-            usuarioCorrente.endereco = usuario.endereco;
-
+            usuarioCorrente = usuario;
             sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
 
-             return true;
+            return true;
         }
-    }    
+    }
     return false;
 }
 
 
 function logoutUser() {
     usuarioCorrente = {};
-    sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));   
+    sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
     window.location = LOGIN_URL;
 }
 
-function addUser(nome, login, senha, email, endereco) {   
-    let newId = generateUUID();
-    let usuario = { "id": newId, "login": login, "senha": senha, "nome": nome, "email": email, 'endereco': endereco, "solicitacoes": "","VanCadastrada":"" };
+function addUser(nome, login, senha, email, endereco) {
+    let usuario = {
+   "id":  generateUUID(),
+   "login": login,
+   "senha": senha,
+   "nome": nome,
+   "email": email,
+   "endereco": endereco,
+   "solicitacoes": [],
+   "vanCadastrada": {
+    "solicitado": false,
+    "aprovado":false,
+    "dadosVan":"",
+    },
+ };
     db_usuarios.usuarios.push(usuario);
+    localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+    sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuario));
+}
+
+
+function addCaronaUser(user){
+    var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios'));   
+    db_usuarios.usuarios = db_usuarios.usuarios.filter((usuario) => usuario.id !== user.id)
+
+    var usuarioCorrenteJSON = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+    user.vanCadastrada = {
+        "solicitado": true,
+        "aprovado":true,
+        "dadosVan":usuarioCorrenteJSON,
+    }
+
+    db_usuarios.usuarios.push(user)
     localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
 }
 
+function removeCaronaUser(user){
+    var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios'));   
+    db_usuarios.usuarios = db_usuarios.usuarios.filter((usuario) => usuario.id !== user.id)
+
+    user.vanCadastrada = {
+        "solicitado": false,
+        "aprovado":false,
+        "dadosVan":{},
+    }
+    
+    db_usuarios.usuarios.push(user)
+    localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+}
 initLoginApp();
