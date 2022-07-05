@@ -17,4 +17,8 @@ Nosso projeto de vans universitárias irá trazer uma solução para o problema 
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Para acessar o sistema basta acessar o link:
+
+https://icei-puc-minas-pples-ti.github.io/plf-es-2022-1-ti1-7946100-van-universitaria/codigo/van_universitaria/login.html 
+
+Após realizar o acesso o usuário deverá realizar o cadastro ou login para conseguir utilizar as funções do sistemma.

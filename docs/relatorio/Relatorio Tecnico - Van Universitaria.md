@@ -155,82 +155,59 @@ RNF-0010 | Motoristas ou estudantes com muitas denúncias são bloqueados da pla
 
 # Projeto de Interface
 
-......  COLOQUE AQUI O SEU TEXTO DE INTRODUÇÃO ......
+Nosso projeto possui 3 telas que são as principais funções da nossa aplicação, que são elas a tela de login e cadastro, a tela de listagem de vans e por último a tela de cadastro de vans.
 
-> Apresente as principais interfaces da solução. Discuta como 
-> foram elaboradas de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](#especificações-do-projeto).
+### Tela de login e Cadastro
+
+Na tela de login e cadastro, será possivel que o usuário forneça os dados necessários de contato como Nome, Telefone, E-mail e Endereço e possa acessar a nossa nossa plataforma.
+
+![Tela de Login](https://user-images.githubusercontent.com/99363911/177228062-34cb4ed1-deff-4890-b982-96f2006f4f2a.png)
+
+### Tela de listagem de vans
+
+Na tela de listagem de vans será possível que os universitários possam buscar a melhor van para a sua situação e visitar os perfis dos motoristas, e por outro lado, os motoristas das vans poderão anunciar o seu transporte fornecendo os seus dados como Turno, Telefone, Cidade e E-mail no seu perfil.
+
+![Listagem de Van](https://user-images.githubusercontent.com/99363911/177228064-15c3453e-b21d-46b5-b292-3ab01b152eba.png)
+
+### Tela de cadastro de vans
+
+Nesta tela os motoristas de vans universitárias poderão cadastrar o seu serviço para que seja listado na página principal, contanto que, forneça todos os dados solicitados no cadastro.
+
+![Cadastro de Vans](https://user-images.githubusercontent.com/99363911/177228852-233d274e-ce1a-4f3f-95d7-e2aba1f864e5.png)
 
 ## User Flow
 
-......  INCLUA AQUI O DIAGRAMA COM O FLUXO DO USUÁRIO NA APLICAÇÃO ......
-
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
-> mapear todo fluxo de telas do site ou app. Essa técnica funciona
-> para alinhar os caminhos e as possíveis ações que o usuário pode
-> fazer junto com os membros de sua equipe.
->
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
->
-> **Exemplo**:
-> 
-> ![Exemplo de UserFlow](images/userflow.jpg)
-
+![User Flow - Van Universitária](https://user-images.githubusercontent.com/99363911/177230007-5173886f-4f94-4ebb-909f-0c0e9e597082.jpg)
 
 ## Wireframes
 
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
+![LoginCadastro](https://user-images.githubusercontent.com/99363911/177234398-c1f8f0e6-99ef-4331-9d91-e2369c37cc05.jpg)
 
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante ao
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> 
-> **Exemplo**:
-> 
-> ![Exemplo de Wireframe](images/wireframe-example.png)
+![Perfil do motorista](https://user-images.githubusercontent.com/99363911/177234535-a877e05e-b543-4ab3-a591-806ff381141c.jpg)
+
+![ListagemVan](https://user-images.githubusercontent.com/99363911/177234539-0509b1db-d7b9-4d6f-840b-f91e45a8b5b6.jpg)
+
+![PerfilUsuario](https://user-images.githubusercontent.com/99363911/177234541-8111d28a-afd6-4eb0-a16c-fc1b00f7810d.jpg)
+
+![Perfil da Van](https://user-images.githubusercontent.com/99363911/177234597-ef37bc12-1dca-462c-9ba4-8dde3145188f.jpg)
+
+![Perfil do motorista](https://user-images.githubusercontent.com/99363911/177234604-8708e513-7b1e-49cf-81df-ee020d1a50db.jpg)
 
 
 # Metodologia
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Nesta parte do documento, você deve apresentar a metodologia 
-> adotada pelo grupo, descrevendo o processo de trabalho baseado nas metodologias ágeis, 
-> a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a
-> gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido
-> pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar
-> o andamento do projeto, a execução das tarefas e o status de desenvolvimento
-> da solução.
-> 
-> **Links Úteis**:
-> - [Tutorial Trello](https://trello.com/b/8AygzjUA/tutorial-trello)
-> - [Gestão ágil de projetos com o Trello](https://www.youtube.com/watch?v=1o9BOMAKBRE)
-> - [Gerência de projetos - Trello com Scrum](https://www.youtube.com/watch?v=DHLA8X_ujwo)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+Foi usada a metodologia Scrum, na qual, os membros do grupo se reuniam diariamente na Daily Scrum para repassar os objetivos, problemas e progressos do projeto. Para o acompanhamento foi utilizado a ferramenta Trello, no qual separavamos em colunas as tarefas nas categorias A FAZER, FAZENDO E FEITO para que todos do grupo pudessem mover os cards conforme o progresso e possibilitar uma visualização geral do progresso realizado durante as semanas.
 
 ## Divisão de Papéis
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### Front-end
+Membro responsável: Lucas Mattos Rodrigues
 
-> Apresente a divisão de papéis e tarefas entre os membros do grupo.
->
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+### Back-end
+Membro responsável: Caio Henrique Miranda dos Reis
 
+### Documentação
+Membros responsáveis: Lucas Mattos Rodrigues e Caio Henrique Miranda dos Reis
 
 ## Ferramentas
 
@@ -238,104 +215,36 @@ RNF-0010 | Motoristas ou estudantes com muitas denúncias são bloqueados da pla
 
 | Ambiente  | Plataforma              |Link de Acesso |
 |-----------|-------------------------|---------------|
-|Processo de Design Thinkgin  | Miro |  https://miro.com/XXXXXXX | 
-|Repositório de código | GitHub | https://github.com/XXXXXXX | 
-|Hospedagem do site | Heroku |  https://XXXXXXX.herokuapp.com | 
-|Protótipo Interativo | MavelApp ou Figma | https://figma.com/XXXXXXX | 
-
->
-> Liste as ferramentas empregadas no desenvolvimento do
-> projeto, justificando a escolha delas, sempre que possível.
-> 
-> As ferramentas empregadas no projeto são:
-> 
-> - Editor de código.
-> - Ferramentas de comunicação
-> - Ferramentas de diagramação
-> - Plataforma de hospedagem
-> 
-> O editor de código foi escolhido porque ele possui uma integração com o
-> sistema de versão. As ferramentas de comunicação utilizadas possuem
-> integração semelhante e por isso foram selecionadas. Por fim, para criar
-> diagramas utilizamos essa ferramenta por melhor captar as
-> necessidades da nossa solução.
-> 
-> **Links Úteis - Hospedagem**:
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Crie seu Site com o HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
-> - [GoDady](https://br.godaddy.com/how-to)
-> - [GitHub Pages](https://pages.github.com/)
-
-## Controle de Versão
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Discuta como a configuração do projeto foi feita na ferramenta de
-> versionamento escolhida. Exponha como a gerência de tags, merges,
-> commits e branchs é realizada. Discuta como a gerência de issues foi
-> realizada.
-> A ferramenta de controle de versão adotada no projeto foi o
-> [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
-> foi utilizado para hospedagem do repositório `upstream`.
-> 
-> O projeto segue a seguinte convenção para o nome de branchs:
-> 
-> - `master`: versão estável já testada do software
-> - `unstable`: versão já testada do software, porém instável
-> - `testing`: versão em testes do software
-> - `dev`: versão de desenvolvimento do software
-> 
-> Quanto à gerência de issues, o projeto adota a seguinte convenção para
-> etiquetas:
-> 
-> - `bugfix`: uma funcionalidade encontra-se com problemas
-> - `enhancement`: uma funcionalidade precisa ser melhorada
-> - `feature`: uma nova funcionalidade precisa ser introduzida
->
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
-> - [5 Git Workflows & Branching Strategy to deliver better code](https://zepel.io/blog/5-git-workflows-to-improve-development/)
->
-> **Exemplo - GitHub Feature Branch Workflow**:
->
-> ![Exemplo de Wireframe](images/Github-Workflow.png)
-
-# **############## SPRINT 1 ACABA AQUI #############**
-
+|Processo de Design Thinkgin  | Miro |  [(https://miro.com/app/board/uXjVO8AXjNw=/?share_link_id=390471608970)] | 
+|Repositório de código | GitHub | [(https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2022-1-ti1-7946100-van-universitaria)] | 
+|Hospedagem do site | GitHub |  [https://icei-puc-minas-pples-ti.github.io/plf-es-2022-1-ti1-7946100-van-universitaria/codigo/van_universitaria/login.html] | 
+|Protótipo Interativo | Figma | [https://www.figma.com/file/9M2UbNTCowXq4d9CH4UBEl/Vans-Universit%C3%A1rias?node-id=0%3A1] | 
+|Editor de Código | Visual Code | |
+|Ferramenta de comunicação | Trello | |
+| User Flow | Google Drawings | [https://docs.google.com/drawings/d/1JoFSHkkG0Yno6OUhw8WmwnXAcuFjliTo5GOz0-lD-es/edit?usp=sharing] |
+| Apresentação | Canva | [https://www.canva.com/design/DAE-X3GBC0c/anTs6CEPbPBTPO3vj4YPbA/view?utm_content=DAE-X3GBC0c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton] |
 
 # Projeto da Solução
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
 ## Tecnologias Utilizadas
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### HTML
+Utilizado para construir os elementos visuais da aplicação web.
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
+### CSS
+Utilizado para estilizar os componentes visuais da aplicação web.
+
+### JS
+Utilizado para realizar as funções e funcionalidades da aplicação web.
+
+### JSON
+Utilizado para salvar os dados em Local Storage.
 
 ## Arquitetura da solução
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
+Com base nos dados do usuários e informações de cadastro das vans que são salvos no navegador, as demais funções da aplicações web são possíveis de serem realizadas.
 
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-> 
-> **Exemplo do diagrama de Arquitetura**:
-> 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
-
+![Arquitetura da solução](https://user-images.githubusercontent.com/99363911/177240819-1083ceff-a742-4624-9ce3-966208eb4f68.jpg)
 
 # Avaliação da Aplicação
 
@@ -347,45 +256,41 @@ RNF-0010 | Motoristas ou estudantes com muitas denúncias são bloqueados da pla
 
 ## Plano de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### 01
+Registro de usuário e Login 
 
-> Enumere quais cenários de testes foram selecionados para teste. Neste
-> tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo
-> de usuários que foi escolhido para participar do teste e as
-> ferramentas utilizadas.
-> 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+### 02
+Cadastro de Van Universitária
 
-## Ferramentas de Testes (Opcional)
+### 03
+Visualização de perfil
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### 04
+Solicitação de carona
 
-> Comente sobre as ferramentas de testes utilizadas.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+### 05
+Aceitar pedido de carona
+
+### 06
+Responsibilidade
 
 ## Registros de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### 01 - Registro de usuário e Login 
+Todos os testes ocorreram como planejado.
 
-> Discorra sobre os resultados do teste. Ressaltando pontos fortes e
-> fracos identificados na solução. Comente como o grupo pretende atacar
-> esses pontos nas próximas iterações. Apresente as falhas detectadas e
-> as melhorias geradas a partir dos resultados obtidos nos testes.
+### 02 - Cadastro de Van Universitária
+Todos os testes ocorreram como planejado.
 
+### 03 - Visualização de perfil
+Os testes de visualização de perfil ocorram bem, porém de edição dos dados obtivemos problemas.
 
-# Referências
+### 04 - Solicitação de carona
+Todos os testes ocorreram como planejado.
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### 05 - Aceitar pedido de carona
+Todos os testes ocorreram como planejado.
 
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados
-> no desenvolvimento do trabalho.
-> 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+### 06 - Responsibilidade
+Foram testados em diversos padrões de telas e todos forão bem sucedidos.
+
