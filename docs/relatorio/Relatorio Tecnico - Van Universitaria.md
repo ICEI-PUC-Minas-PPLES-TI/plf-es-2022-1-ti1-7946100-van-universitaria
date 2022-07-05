@@ -196,34 +196,18 @@ Nesta tela os motoristas de vans universitárias poderão cadastrar o seu servi�
 
 # Metodologia
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Nesta parte do documento, você deve apresentar a metodologia 
-> adotada pelo grupo, descrevendo o processo de trabalho baseado nas metodologias ágeis, 
-> a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a
-> gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido
-> pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar
-> o andamento do projeto, a execução das tarefas e o status de desenvolvimento
-> da solução.
-> 
-> **Links Úteis**:
-> - [Tutorial Trello](https://trello.com/b/8AygzjUA/tutorial-trello)
-> - [Gestão ágil de projetos com o Trello](https://www.youtube.com/watch?v=1o9BOMAKBRE)
-> - [Gerência de projetos - Trello com Scrum](https://www.youtube.com/watch?v=DHLA8X_ujwo)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+Foi usada a metodologia Scrum, na qual, os membros do grupo se reuniam diariamente na Daily Scrum para repassar os objetivos, problemas e progressos do projeto. Para o acompanhamento foi utilizado a ferramenta Trello, no qual separavamos em colunas as tarefas nas categorias A FAZER, FAZENDO E FEITO para que todos do grupo pudessem mover os cards conforme o progresso e possibilitar uma visualização geral do progresso realizado durante as semanas.
 
 ## Divisão de Papéis
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### Front-end
+Membro responsável: Lucas Mattos Rodrigues
 
-> Apresente a divisão de papéis e tarefas entre os membros do grupo.
->
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+### Back-end
+Membro responsável: Caio Henrique Miranda dos Reis
 
+### Documentação
+Membros responsáveis: Lucas Mattos Rodrigues e Caio Henrique Miranda dos Reis
 
 ## Ferramentas
 
@@ -231,71 +215,14 @@ Nesta tela os motoristas de vans universitárias poderão cadastrar o seu servi�
 
 | Ambiente  | Plataforma              |Link de Acesso |
 |-----------|-------------------------|---------------|
-|Processo de Design Thinkgin  | Miro |  https://miro.com/XXXXXXX | 
-|Repositório de código | GitHub | https://github.com/XXXXXXX | 
-|Hospedagem do site | Heroku |  https://XXXXXXX.herokuapp.com | 
-|Protótipo Interativo | MavelApp ou Figma | https://figma.com/XXXXXXX | 
-
->
-> Liste as ferramentas empregadas no desenvolvimento do
-> projeto, justificando a escolha delas, sempre que possível.
-> 
-> As ferramentas empregadas no projeto são:
-> 
-> - Editor de código.
-> - Ferramentas de comunicação
-> - Ferramentas de diagramação
-> - Plataforma de hospedagem
-> 
-> O editor de código foi escolhido porque ele possui uma integração com o
-> sistema de versão. As ferramentas de comunicação utilizadas possuem
-> integração semelhante e por isso foram selecionadas. Por fim, para criar
-> diagramas utilizamos essa ferramenta por melhor captar as
-> necessidades da nossa solução.
-> 
-> **Links Úteis - Hospedagem**:
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Crie seu Site com o HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
-> - [GoDady](https://br.godaddy.com/how-to)
-> - [GitHub Pages](https://pages.github.com/)
-
-## Controle de Versão
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Discuta como a configuração do projeto foi feita na ferramenta de
-> versionamento escolhida. Exponha como a gerência de tags, merges,
-> commits e branchs é realizada. Discuta como a gerência de issues foi
-> realizada.
-> A ferramenta de controle de versão adotada no projeto foi o
-> [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
-> foi utilizado para hospedagem do repositório `upstream`.
-> 
-> O projeto segue a seguinte convenção para o nome de branchs:
-> 
-> - `master`: versão estável já testada do software
-> - `unstable`: versão já testada do software, porém instável
-> - `testing`: versão em testes do software
-> - `dev`: versão de desenvolvimento do software
-> 
-> Quanto à gerência de issues, o projeto adota a seguinte convenção para
-> etiquetas:
-> 
-> - `bugfix`: uma funcionalidade encontra-se com problemas
-> - `enhancement`: uma funcionalidade precisa ser melhorada
-> - `feature`: uma nova funcionalidade precisa ser introduzida
->
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
-> - [5 Git Workflows & Branching Strategy to deliver better code](https://zepel.io/blog/5-git-workflows-to-improve-development/)
->
-> **Exemplo - GitHub Feature Branch Workflow**:
->
-> ![Exemplo de Wireframe](images/Github-Workflow.png)
-
-# **############## SPRINT 1 ACABA AQUI #############**
-
+|Processo de Design Thinkgin  | Miro |  [(https://miro.com/app/board/uXjVO8AXjNw=/?share_link_id=390471608970)] | 
+|Repositório de código | GitHub | [(https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2022-1-ti1-7946100-van-universitaria)] | 
+|Hospedagem do site | GitHub |  [https://icei-puc-minas-pples-ti.github.io/plf-es-2022-1-ti1-7946100-van-universitaria/codigo/van_universitaria/login.html] | 
+|Protótipo Interativo | Figma | [https://www.figma.com/file/9M2UbNTCowXq4d9CH4UBEl/Vans-Universit%C3%A1rias?node-id=0%3A1] | 
+|Editor de Código | Visual Code | |
+|Ferramenta de comunicação | Trello | |
+| User Flow | Google Drawings | [https://docs.google.com/drawings/d/1JoFSHkkG0Yno6OUhw8WmwnXAcuFjliTo5GOz0-lD-es/edit?usp=sharing] |
+| Apresentação | Canva | [https://www.canva.com/design/DAE-X3GBC0c/anTs6CEPbPBTPO3vj4YPbA/view?utm_content=DAE-X3GBC0c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton] |
 
 # Projeto da Solução
 
