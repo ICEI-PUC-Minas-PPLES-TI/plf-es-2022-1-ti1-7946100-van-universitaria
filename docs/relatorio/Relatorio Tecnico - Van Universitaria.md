@@ -256,23 +256,41 @@ Com base nos dados do usuários e informações de cadastro das vans que são sa
 
 ## Plano de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### 01
+Registro de usuário e Login 
 
-> Enumere quais cenários de testes foram selecionados para teste. Neste
-> tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo
-> de usuários que foi escolhido para participar do teste e as
-> ferramentas utilizadas.
-> 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+### 02
+Cadastro de Van Universitária
+
+### 03
+Visualização de perfil
+
+### 04
+Solicitação de carona
+
+### 05
+Aceitar pedido de carona
+
+### 06
+Responsibilidade
 
 ## Registros de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+### 01 - Registro de usuário e Login 
+Todos os testes ocorreram como planejado.
 
-> Discorra sobre os resultados do teste. Ressaltando pontos fortes e
-> fracos identificados na solução. Comente como o grupo pretende atacar
-> esses pontos nas próximas iterações. Apresente as falhas detectadas e
-> as melhorias geradas a partir dos resultados obtidos nos testes.
+### 02 - Cadastro de Van Universitária
+Todos os testes ocorreram como planejado.
+
+### 03 - Visualização de perfil
+Os testes de visualização de perfil ocorram bem, porém de edição dos dados obtivemos problemas.
+
+### 04 - Solicitação de carona
+Todos os testes ocorreram como planejado.
+
+### 05 - Aceitar pedido de carona
+Todos os testes ocorreram como planejado.
+
+### 06 - Responsibilidade
+Foram testados em diversos padrões de telas e todos forão bem sucedidos.
+
