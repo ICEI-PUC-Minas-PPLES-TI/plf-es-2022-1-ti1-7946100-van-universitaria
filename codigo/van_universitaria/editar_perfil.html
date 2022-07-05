@@ -1,0 +1,165 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Van</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="caio.css">
+
+
+    <header>
+        <div class="col-sm-12 menu  ">
+
+            <div class="container flex">
+                <div class="row">
+                    <div class="col-sm-4 center">
+                        <img src="img/logo.png" alt="aslogo" id="aslogo">
+                    </div>
+                    <div class="col-sm-8 menuUL">
+                        <ul>
+                            <li>
+                                Inicio
+                            </li>
+                            <li>
+                                <a href="lista-van.html" rel="noopener noreferrer"> Vans disponiveis</a>
+                            </li>
+                            <li>
+                                <a href="cadastro-van.html"> Cadastrar minha van</a>
+                            </li>
+                            <li>
+                                <a href="editar_perfil.html"> Perfil </a>
+                            </li>
+                            <li>
+                                Sair
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+</head>
+
+<body onload="init()">
+    <h1 class="titleh1">Perfil</h1>
+
+    <div class="container">
+        <div class="row">
+            <div id="msg" class="col-sm-10 offset-sm-1 ">
+                <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+            </div>
+        </div>
+
+        <form id="form-contato">
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" class="form-control" id="usuario" required
+                        placeholder="Informe o nome do contato">
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" class="form-control" id="nome" required placeholder="Telefone">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" required placeholder="Informe o nome do contato">
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" class="form-control" id="telefone" required placeholder="Telefone">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label for="endereço">Endereço</label>
+                    <input type="email" class="form-control" id="endereco" required placeholder="Informe o e-mail">
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="senha">Senha</label>
+                    <input type="text" class="form-control" id="senha" placeholder="Informe a cidade do contato">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Minha Carona</h2>
+                <table id="grid-contatos" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Status</th>
+                            <th scope="col">Nome do motorista</th>
+                            <th scope="col">Turno</th>
+                            <th scope="col">Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-perfil">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+    function init() {
+        var usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+        usuarioCorrenteJSON = JSON.parse(usuarioCorrenteJSON)
+        console.log(usuarioCorrenteJSON)
+
+
+        document.getElementById('nome').value = usuarioCorrenteJSON.nome;
+        document.getElementById('email').value = usuarioCorrenteJSON.email;
+        document.getElementById('endereco').value = usuarioCorrenteJSON.endereco;
+        document.getElementById('senha').value = usuarioCorrenteJSON.senha;
+        document.getElementById('usuario').value = usuarioCorrenteJSON.login;
+        document.getElementById('email').value = usuarioCorrenteJSON.email;
+
+
+        $("#table-perfil").append(`<tr>
+    <td>${status()}</td>
+    <td>${usuarioCorrenteJSON.vanCadastrada.dadosVan.nome}</td>
+    <td>${usuarioCorrenteJSON.vanCadastrada.dadosVan.turno}</td>
+    <td>${usuarioCorrenteJSON.vanCadastrada.dadosVan.telefone}</td>
+    </tr>`);
+
+
+    function status() {
+        var vanCadastrada = usuarioCorrenteJSON.vanCadastrada;
+        
+        if (vanCadastrada.aprovado && vanCadastrada.solicitado) {
+            return "Aceito"
+        } else if (vanCadastrada.aprovado == false && vanCadastrada.solicitado == true) {
+            return "Aguadando aprovação"
+        } else {
+            return "Recusado"
+        }
+    }
+    }
+
+
+
+
+</script>
+
+</html>

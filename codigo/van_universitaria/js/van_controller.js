@@ -116,9 +116,9 @@ var db_van_incial = {
 
 function getUserVans() {
     db_van = JSON.parse(localStorage.getItem('db_van'));
-    if (db_van.data == null) {
+    if (db_van == null) {
         db_van = db_van_incial;
-        JSON.parse(localStorage.setItem('db_van', JSON.stringify(db_van)))
+       localStorage.setItem('db_van', JSON.stringify(db_van))
     };
 }
 function generateUUID() {
@@ -147,7 +147,9 @@ function inserir_van(van) {
         "telefone": van.telefone,
         "cidade": van.cidade,
         "turno": van.turno,
-        'cpf': van.cpf
+        'cpf': van.cpf,
+        "solicitacoes": "[]",
+        "caronas": "[]",
     };
 
     db_van.data.push(nova_van);
@@ -156,27 +158,6 @@ function inserir_van(van) {
     localStorage.setItem('db_van', JSON.stringify(db_van));
 }
 
-function update_van(id, van) {
-    let index = db_van.data.map(obj => obj.id).indexOf(id);
-
-    db_van.data[index].nome = van.nome,
-        db_van.data[index].email = van.email,
-        db_van.data[index].telefone = van.telefone,
-        db_van.data[index].cidade = van.cidade,
-        db_van.data[index].turno = van.turno,
-
-        alert("van alterada com sucesso");
-
-    localStorage.setItem('db_van', JSON.stringify(db_van));
-}
-
-function delete_van(id) {
-    db_van.data = db_van.data.filter(function (element) { return element.id != id });
-
-    alert("van removida com sucesso");
-
-    localStorage.setItem('db_van', JSON.stringify(db_van));
-}
 
 function sendSolicitacao(idVan) {
     usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');

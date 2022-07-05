@@ -32,7 +32,7 @@
                                 <a href="cadastro-van.html"> Cadastrar minha van</a>
                             </li>
                             <li>
-                                Perfil
+                                <a href="editar_perfil.html"> Perfil </a>
                             </li>
                             <li>
                                 Sair
@@ -56,16 +56,15 @@
     </div>
 
     <script src="js/van_controller.js"></script>
+    <script src="js/login.js"></script>
     <script>
-var usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
-    usuarioCorrenteJSON = JSON.parse(usuarioCorrenteJSON)
 
-    console.log(usuarioCorrenteJSON)
+        var usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+        usuarioCorrenteJSON = JSON.parse(usuarioCorrenteJSON)
 
-
+        var van = JSON.parse(localStorage.getItem('info_van'));
         function ShowVan(index) {
-            let van = JSON.parse(localStorage.getItem('info_van'));
-           
+
             $("#infoVan").append(`
                 <h1 class="titleh1">${van.nome}</h1>
 
@@ -91,12 +90,16 @@ var usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
 
                 <div class="col-sm-12">
                     <br><br>
-                <input onclick="sendSolicitacao('${van.id}')" type="button" class="btn btn-success" value="Solicitar Carona">
+                <input onclick="enviarSolicitcao()" type="button" class="btn btn-success" value="Solicitar Carona">
             </div>
                 
                 `);
         }
-     
+
+        function enviarSolicitcao() {
+            sendSolicitacao(van.id)
+            awaitMorotista(van)
+        }
     </script>
 
 </body>

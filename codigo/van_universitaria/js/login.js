@@ -103,16 +103,35 @@ function addCaronaUser(user){
     localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
 }
 
+function awaitMorotista(van){
+    var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios'));   
+    var usuarioCorrenteJSON = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+
+    db_usuarios.usuarios = db_usuarios.usuarios.filter((usuario) => usuario.id !== usuarioCorrenteJSON.id)
+
+    usuarioCorrenteJSON.vanCadastrada = {
+        "solicitado": true,
+        "aprovado":false,
+        "dadosVan":van,
+    }
+
+
+    db_usuarios.usuarios.push(usuarioCorrenteJSON)
+    localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+    sessionStorage.setItem('usuarioCorrente',JSON.stringify(usuarioCorrenteJSON));
+    window.location = "editar_perfil.html"
+}
+
 function removeCaronaUser(user){
     var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios'));   
     db_usuarios.usuarios = db_usuarios.usuarios.filter((usuario) => usuario.id !== user.id)
 
-    user.vanCadastrada = {
+    user.vanCadastrada = {        
         "solicitado": false,
         "aprovado":false,
         "dadosVan":{},
     }
-    
+
     db_usuarios.usuarios.push(user)
     localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
 }
