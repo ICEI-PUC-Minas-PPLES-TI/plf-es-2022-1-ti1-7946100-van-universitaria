@@ -155,12 +155,25 @@ RNF-0010 | Motoristas ou estudantes com muitas denúncias são bloqueados da pla
 
 # Projeto de Interface
 
-......  COLOQUE AQUI O SEU TEXTO DE INTRODUÇÃO ......
+Nosso projeto possui 3 telas que são as principais funções da nossa aplicação, que são elas a tela de login e cadastro, a tela de listagem de vans e por último a tela de cadastro de vans.
 
-> Apresente as principais interfaces da solução. Discuta como 
-> foram elaboradas de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](#especificações-do-projeto).
+### Tela de login e Cadastro
+
+Na tela de login e cadastro, será possivel que o usuário forneça os dados necessários de contato como Nome, Telefone, E-mail e Endereço e possa acessar a nossa nossa plataforma.
+
+![Tela de Login](https://user-images.githubusercontent.com/99363911/177228062-34cb4ed1-deff-4890-b982-96f2006f4f2a.png)
+
+### Tela de listagem de vans
+
+Na tela de listagem de vans será possível que os universitários possam buscar a melhor van para a sua situação e visitar os perfis dos motoristas, e por outro lado, os motoristas das vans poderão anunciar o seu transporte fornecendo os seus dados como Turno, Telefone, Cidade e E-mail no seu perfil.
+
+![Listagem de Van](https://user-images.githubusercontent.com/99363911/177228064-15c3453e-b21d-46b5-b292-3ab01b152eba.png)
+
+### Tela de cadastro de vans
+
+Nesta tela os motoristas de vans universitárias poderão cadastrar o seu serviço para que seja listado na página principal, contanto que, forneça todos os dados solicitados no cadastro.
+
+![Cadastro de Vans](https://user-images.githubusercontent.com/99363911/177228852-233d274e-ce1a-4f3f-95d7-e2aba1f864e5.png)
 
 ## User Flow
 
