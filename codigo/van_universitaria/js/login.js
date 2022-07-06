@@ -67,7 +67,7 @@ function logoutUser() {
     window.location = LOGIN_URL;
 }
 
-function addUser(nome, login, senha, email, endereco) {
+function addUser(nome, login, senha, email, endereco,telefone) {
     let usuario = {
    "id":  generateUUID(),
    "login": login,
@@ -75,6 +75,7 @@ function addUser(nome, login, senha, email, endereco) {
    "nome": nome,
    "email": email,
    "endereco": endereco,
+   "telefone":telefone,
    "solicitacoes": [],
    "vanCadastrada": {
     "solicitado": false,
@@ -90,6 +91,7 @@ function addUser(nome, login, senha, email, endereco) {
 
 function addCaronaUser(user){
     var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios'));   
+    user = JSON.parse(user)
     db_usuarios.usuarios = db_usuarios.usuarios.filter((usuario) => usuario.id !== user.id)
 
     var usuarioCorrenteJSON = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
@@ -98,9 +100,8 @@ function addCaronaUser(user){
         "aprovado":true,
         "dadosVan":usuarioCorrenteJSON,
     }
-
     db_usuarios.usuarios.push(user)
-    localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+   localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
 }
 
 function awaitMorotista(van){
@@ -124,6 +125,7 @@ function awaitMorotista(van){
 
 function removeCaronaUser(user){
     var db_usuarios = JSON.parse(localStorage.getItem('db_usuarios'));   
+    user = JSON.parse(user)
     db_usuarios.usuarios = db_usuarios.usuarios.filter((usuario) => usuario.id !== user.id)
 
     user.vanCadastrada = {        

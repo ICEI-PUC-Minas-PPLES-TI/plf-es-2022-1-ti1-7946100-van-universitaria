@@ -133,7 +133,7 @@
         document.getElementById('endereco').value = usuarioCorrenteJSON.endereco;
         document.getElementById('senha').value = usuarioCorrenteJSON.senha;
         document.getElementById('usuario').value = usuarioCorrenteJSON.login;
-        document.getElementById('email').value = usuarioCorrenteJSON.email;
+        document.getElementById('telefone').value = usuarioCorrenteJSON.telefone;
 
 
         $("#table-perfil").append(`<tr>
@@ -147,7 +147,7 @@
     function status() {
         var vanCadastrada = usuarioCorrenteJSON.vanCadastrada;
         
-        if (vanCadastrada.aprovado && vanCadastrada.solicitado) {
+        if (vanCadastrada.aprovado == true && vanCadastrada.solicitado == true) {
             return "Aceito"
         } else if (vanCadastrada.aprovado == false && vanCadastrada.solicitado == true) {
             return "Aguadando aprovação"

@@ -107,7 +107,6 @@
     usuarioCorrenteJSON = JSON.parse(usuarioCorrenteJSON)
 
     function ListaPerfil() {
-        console.log(usuarioCorrenteJSON);
         $("#infoVan").append(`
                 <h1 class="titleh1">${usuarioCorrenteJSON.nome}</h1>
 
@@ -153,7 +152,7 @@
 
         $("#table-caronas").html("");
 
-        if (usuarioCorrenteJSON.caronas.length > 0) {
+        if (usuarioCorrenteJSON.caronas.length > 0 && typeof usuarioCorrenteJSON.caronas !== 'string') {
 
             usuarioCorrenteJSON.caronas.forEach((caronas, index) => {
 
@@ -169,10 +168,9 @@
     }
 
     function acceptInfo(index) {
-        aceitarCorrida(usuarioCorrenteJSON.solicitacoes[index]);
-        addCaronaUser(usuarioCorrenteJSON.solicitacoes[index])
-
-        document.location.reload(true)
+      aceitarCorrida(usuarioCorrenteJSON.solicitacoes[index]);
+      addCaronaUser(usuarioCorrenteJSON.solicitacoes[index])
+      document.location.reload(true)
     }
 
     function RecusarCarona(index) {
