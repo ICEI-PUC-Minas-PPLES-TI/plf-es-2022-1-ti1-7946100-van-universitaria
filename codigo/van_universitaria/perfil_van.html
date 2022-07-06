@@ -103,10 +103,11 @@
 <script src="js/van_controller.js"></script>
 <script src="js/login.js"></script>
 <script>
-
     var usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
     usuarioCorrenteJSON = JSON.parse(usuarioCorrenteJSON)
+
     function ListaPerfil() {
+        console.log(usuarioCorrenteJSON);
         $("#infoVan").append(`
                 <h1 class="titleh1">${usuarioCorrenteJSON.nome}</h1>
 
@@ -152,34 +153,39 @@
 
         $("#table-caronas").html("");
 
-        usuarioCorrenteJSON.caronas.forEach((caronas, index) => {
+        if (usuarioCorrenteJSON.caronas.length > 0) {
 
-            $("#table-caronas").append(`<tr>
+            usuarioCorrenteJSON.caronas.forEach((caronas, index) => {
+
+                $("#table-caronas").append(`<tr>
                 <td>${caronas.nome}</td>
                 <td>${caronas.email}</td>
                 <td>${caronas.endereco}</td>
                 <td>${caronas.telefone}</td>
                 <td><button onclick="RemoverCarona(${index})">Remover carona</button></td>
                 </tr>`);
-        });
+            });
+        }
     }
 
     function acceptInfo(index) {
         aceitarCorrida(usuarioCorrenteJSON.solicitacoes[index]);
-        addCaronaUser(usuarioCorrenteJSON.caronas[index])
+        addCaronaUser(usuarioCorrenteJSON.solicitacoes[index])
+
         document.location.reload(true)
     }
+
     function RecusarCarona(index) {
         recusarCorrida(usuarioCorrenteJSON.solicitacoes[index]);
-        removeCaronaUser(usuarioCorrenteJSON.caronas[index])
+        removeCaronaUser(usuarioCorrenteJSON.solicitacoes[index])
         document.location.reload(true)
     }
+
     function RemoverCarona(index) {
         removeCorrida(usuarioCorrenteJSON.caronas[index]);
         removeCaronaUser(usuarioCorrenteJSON.caronas[index]);
         document.location.reload(true)
     }
-
 </script>
 
 </html>
