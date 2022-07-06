@@ -59,43 +59,39 @@
             <div class="form-group row">
                 <div class="col-sm-6">
                     <label for="usuario">Usuário</label>
-                    <input type="text" class="form-control" id="usuario" required
+                    <input type="text" disabled class="form-control" id="usuario" required
                         placeholder="Informe o nome do contato">
                 </div>
 
                 <div class="col-sm-6">
                     <label for="nome">Nome completo</label>
-                    <input type="text" class="form-control" id="nome" required placeholder="Telefone">
+                    <input type="text" disabled class="form-control" id="nome" required placeholder="Telefone">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-6">
                     <label for="email">Email</label>
-                    <input type="text" class="form-control" id="email" required placeholder="Informe o nome do contato">
+                    <input type="text" disabled class="form-control" id="email" required placeholder="Informe o nome do contato">
                 </div>
 
                 <div class="col-sm-6">
                     <label for="telefone">Telefone</label>
-                    <input type="text" class="form-control" id="telefone" required placeholder="Telefone">
+                    <input type="text" disabled class="form-control" id="telefone" required placeholder="Telefone">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-6">
                     <label for="endereço">Endereço</label>
-                    <input type="email" class="form-control" id="endereco" required placeholder="Informe o e-mail">
+                    <input type="email" disabled class="form-control" id="endereco" required placeholder="Informe o e-mail">
                 </div>
 
                 <div class="col-sm-6">
                     <label for="senha">Senha</label>
-                    <input type="text" class="form-control" id="senha" placeholder="Informe a cidade do contato">
+                    <input type="text" disabled class="form-control" id="senha" placeholder="Informe a cidade do contato">
                 </div>
             </div>
 
-            <div class="form-group row">
-                <div class="col-sm-12">
-                    <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
-                </div>
-            </div>
+
         </form>
 
         <div class="row">
@@ -122,20 +118,26 @@
 
 </body>
 <script>
+    var usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+    usuarioCorrenteJSON = JSON.parse(usuarioCorrenteJSON)
+
+    var nome = document.getElementById('nome');
+    var email = document.getElementById('email');
+    var endereco = document.getElementById('endereco');
+    var senha = document.getElementById('senha');
+    var usuario = document.getElementById('usuario');
+    var telefone = document.getElementById('telefone');
+
+
+
+
     function init() {
-        var usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
-        usuarioCorrenteJSON = JSON.parse(usuarioCorrenteJSON)
-        console.log(usuarioCorrenteJSON)
-
-
-        document.getElementById('nome').value = usuarioCorrenteJSON.nome;
-        document.getElementById('email').value = usuarioCorrenteJSON.email;
-        document.getElementById('endereco').value = usuarioCorrenteJSON.endereco;
-        document.getElementById('senha').value = usuarioCorrenteJSON.senha;
-        document.getElementById('usuario').value = usuarioCorrenteJSON.login;
-        document.getElementById('telefone').value = usuarioCorrenteJSON.telefone;
-
-
+        nome.value = usuarioCorrenteJSON.nome;
+        email.value = usuarioCorrenteJSON.email;
+        endereco.value = usuarioCorrenteJSON.endereco;
+        senha.value = usuarioCorrenteJSON.senha;
+        usuario.value = usuarioCorrenteJSON.login;
+        telefone.value = usuarioCorrenteJSON.telefone;
         $("#table-perfil").append(`<tr>
     <td>${status()}</td>
     <td>${usuarioCorrenteJSON.vanCadastrada.dadosVan.nome}</td>
@@ -144,22 +146,32 @@
     </tr>`);
 
 
-    function status() {
-        var vanCadastrada = usuarioCorrenteJSON.vanCadastrada;
-        
-        if (vanCadastrada.aprovado == true && vanCadastrada.solicitado == true) {
-            return "Aceito"
-        } else if (vanCadastrada.aprovado == false && vanCadastrada.solicitado == true) {
-            return "Aguadando aprovação"
-        } else {
-            return "Recusado"
+        function status() {
+            var vanCadastrada = usuarioCorrenteJSON.vanCadastrada;
+
+            if (vanCadastrada.aprovado == true && vanCadastrada.solicitado == true) {
+                return "Aceito"
+            } else if (vanCadastrada.aprovado == false && vanCadastrada.solicitado == true) {
+                return "Aguadando aprovação"
+            } else {
+                return "Recusado"
+            }
         }
     }
+
+
+
+    function updateUser() {
+        userInfo = {
+            "nome": nome.value,
+            "email": email.value,
+            "endereco": endereco.value,
+            "senha": senha.value,
+            "login": usuario.value,
+            "telefone": telefone.value,
+        }
+        updateUsuario(userInfo)
     }
-
-
-
-
 </script>
 
 </html>
